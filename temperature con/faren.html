@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+            background-image: url("w2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-wrap: wrap;
+           
+        }
+        .main{
+           text-align: center; 
+           height: 400px;
+           width:400px;
+           margin-left: 600px;
+           margin-top: 200px;
+           background-color: white;
+           color: black;
+           box-sizing: border-box;
+          
+           
+        }
+
+        #b1 {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            margin-top: 20px;
+
+            }
+
+        #b1 {
+            background-color: rgb(237, 240, 244); 
+            color:black; 
+            border: 2px solid #7007fa;
+        }
+
+        #b1:hover {
+            background-color: #0055ff;
+            color: white;
+        }
+           
+        #res{
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #type{
+            margin: 10px;
+            margin-left: 0px;
+            padding-left: 10px;
+
+        }
+        #a1{
+            background: transparent;
+            border:none;
+            outline: none;
+            border-bottom: 2px solid black;
+            padding: 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .sel{
+            margin-left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <br>
+        <h2>Temperature &nbsp; Converter</h1><br>
+        
+        <input type="number" id="a1" name="a1" placeholder="Enter Temperature" height="50px" width="50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <br>
+        <div class="sel">Type :
+            <select name="type" id="type">
+                <option value="k">Kelvin</option>
+                <option value="f" selected>Fahrenheit</option>
+            </select>
+            <br><br></div>
+        
+       
+        Result
+        <input type="text" id="res" name="res" disabled >
+        <br><br>
+        <input type="button" id="b1" name="b1" value="Convert" onclick="display()">
+
+
+    </div>
+</body>
+<script type="text/javascript">
+        function display()
+        {
+            var x=document.getElementById("a1").value;
+            var y=document.getElementById("type").value;
+            if( y == "f")
+            {
+                var temp= (parseFloat(x) * 1.8) + 32;
+                document.getElementById("res").value ="  "+temp+ " °F";
+            }
+            else if (y == "k") {
+
+                var temp=(parseFloat(x) + 273.15);
+                document.getElementById("res").value ="  "+temp+ " °K";
+            } 
+        }
+
+
+
+</script>
+</html>
