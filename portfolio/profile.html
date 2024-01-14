@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaman developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(36, 1, 54);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(191, 8, 252);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        .left {
+            font-size: 2rem;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .firstsec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 90 0;
+
+        }
+
+        .firstsec>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+
+
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .rightsection {
+
+
+            color: black;
+
+
+        }
+
+        img {
+            width: 450px;
+            height: 450px;
+
+        }
+
+        .glow {
+            color: rgb(187, 255, 0);
+        }
+
+        .glow:hover {
+            color: rgb(251, 255, 0);
+
+
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            font-weight: bold;
+            font-size: large;
+            color: rgb(0, 0, 0);
+
+        }
+
+        #element {
+            color: rgb(191, 122, 255)
+        }
+
+        .leftsection .btn {
+            margin-top: 40px;
+            padding: 12px;
+            background-color: rgb(136 8 201);
+            color: white;
+            border-radius: 6px;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        .leftsection .btn:hover{
+            padding: 12px;
+            background-color: rgb(30, 2, 44);
+            color: white;
+            border-radius: 6px;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Aaman's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="profile.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsec">
+            <div class="leftsection">
+                Hi, My name is <span class="glow">Aaman</span>
+                <div>and I am a fervid</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit GitHub</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="dev.png">
+            </div>
+
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Student', 'Web Developer ', 'Gamer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
